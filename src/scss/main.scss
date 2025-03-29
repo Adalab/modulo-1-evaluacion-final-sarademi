@@ -10,6 +10,10 @@ h1{
     color: #0C474B;
 }
 
+h3{
+    font-size: 20px;
+}
+
 /* Estilos del header*/
 
 .header {
@@ -20,14 +24,9 @@ h1{
     background-repeat: no-repeat;
     background-position: center;
     
-    
-    @media (min-width: 900px) { /* Tablet */
-            height: 80vh;
-    }
-    
-    @media (min-width: 1728px) { /* Desktop */
-            height: 100vh;
-    }  
+@media (min-width: 1024px) { /* Desktop */
+        padding: 45px 0 0 80px;
+}  
 }
 
 
@@ -35,11 +34,15 @@ h1{
         position: fixed;  
         top: 40px;
         left: 30px;
+
+        @media (min-width: 1024px) { /* Desktop */
+            display: none;
+    } 
 }
 
 .header__div-logo{
     position: absolute;
-    left: 50vw;
+    left: 40vw;
     top: 40px;
 
 }
@@ -60,11 +63,47 @@ h1{
     flex-direction: column;
     align-items: center;
     gap: 80px;
-    padding-top: 50vh;
+    padding-top: 40vh;
+}
 
-    @media (min-width: 900px) { /* Tablet & Desktop */
-        justify-content: flex-start;
+.header__nav {
+    padding: 30px 15px 0 0;
+    @media (max-width: 1024px){
+        display: none;
+    }
+}
+
+.header__menu{
+    color: #0C474B;
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+    margin-left: 10px;   
 }
 
 
+/* Estilos del main*/
+/* Main sección 1*/
+
+.main__section1{
+    background-color: #f0ebe5;
+    color: #0C474B;
+    display: grid;
+    height: 140vh;
+    gap: 40px;
+    place-items: center;
+    text-align: center;
+    padding: 50px 140px 50px 140px;
+
+    @media (min-width: 768px) { /* Tablet & Desktop */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 60vh;
+    }
+}
+
+.main__section1-titulo{
+    @media (min-width: 768px) { /* Tablet & Desktop */
+            grid-column: 1/4;
+    }
 }
