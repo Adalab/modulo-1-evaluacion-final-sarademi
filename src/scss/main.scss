@@ -29,9 +29,11 @@ a {
 
     @media (min-width: 900px) { /*Tablet*/
         padding: 45px 0 0 100px;
+        background-size: 150%;
+        background-position: right;
 } 
     
-@media (min-width: 1728px) { /* Desktop */
+    @media (min-width: 1728px) { /* Desktop */
         padding: 45px 0 0 80px;
 }  
 }
@@ -89,16 +91,13 @@ a {
 
     @media (min-width: 900px) { /* Tablet & Desktop */
         align-items: flex-start;
-        gap: 0px;
+        gap: 20px;
         padding-left: 40px;
 
         .header__div-h1-span {
             display: block;
         }
     }
-
-    
-
 }
 
 .header__nav {
@@ -140,6 +139,13 @@ a {
 .main__section1-titulo{
     @media (min-width: 900px) { /* Tablet & Desktop */
             grid-column: 1/4;
+    }
+}
+
+@media (min-width: 900px) { /* Tablet & Desktop */
+
+    .main__section1-titulo-span {
+        display: block;
     }
 }
 
