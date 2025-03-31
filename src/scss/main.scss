@@ -45,8 +45,12 @@ a {
 
 .header__div-logo{
     position: absolute;
-    left: 40vw;
+    left: 30%;
     top: 40px;
+
+    @media (min-width: 768px) { /* Tablet & Desktop */
+        left: 45%;
+    }
 
 }
 
@@ -67,10 +71,23 @@ a {
     align-items: center;
     gap: 80px;
     padding-top: 40vh;
+
+    @media (min-width: 768px) { /* Tablet & Desktop */
+        align-items: flex-start;
+        gap: 0px;
+        padding-left: 40px;
+
+        .header__div-h1-span {
+            display: block;
+        }
+    }
+
+    
+
 }
 
 .header__nav {
-    padding: 30px 15px 0 0;
+    padding: 30px 15px 0 30px;
     @media (max-width: 1024px){
         display: none;
     }
@@ -163,5 +180,61 @@ a {
         grid-template-columns: 70% 30%;
     }
 
+}
+
+
+/* Estilos footer*/
+
+.footer {
+    background-color: #0C474B;
+    color: #b6c8c9;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 30px 10% 30px 35%;
+    position: relative;
+
+    @media (min-width: 768px) { /* Tablet & Desktop */
+        flex-direction: row;
+        padding: 20vh 10% 20vh 15%;
+        gap: 15vw;
+    }
+}
+
+footer a {
+    text-decoration: none;
+  }
+
+.footer__ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.footer__rrss {
+display: flex;
+gap: 20px;
+}
+
+.footer__rrss i {
+    font-size: 20px;
+    margin: 30px 0 30px 0;
+    color: white; 
+}
+
+.footer__arrow {
+    position: absolute; 
+    bottom: 20px; 
+    right: 20px; 
+    font-size: 20px;
+    color: white;
+
+    @media (min-width: 768px) { /* Tablet & Desktop */
+        bottom: 23vh;
+        right: 20vh;
+    }
 }
 
